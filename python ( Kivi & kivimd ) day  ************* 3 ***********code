@@ -1,0 +1,24 @@
+# ADDING IMAGE  / INSERTING IMG IN KIVY
+# python ( Kivi & kivimd ) day  ************* 3 ***********code
+
+
+
+from kivy.app import App                                                             # importing app 
+from kivy.uix.image import Image, AsyncImage                                         # importing an image in kivy func..
+
+
+
+class utsApp(App):                                                                    # creting class
+    def build(self):
+       img = Image(source = "Your paragraph text (1).jpg", size_hint = (None,None),
+                   width =590, height=490, pos_hint={"center_x":0.5,"center_y":0.5})
+       return img
+
+
+
+# creating class and func.. build for ui, img class for image input and other detailing linke image source ,sixe_hint, pos for center 
+
+
+
+utsApp().run()
+
