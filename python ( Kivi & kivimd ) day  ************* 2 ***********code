@@ -1,0 +1,23 @@
+# python ( Kivi & kivimd ) day  ************* 2 ***********code
+
+from kivy.app import App                                                                              # pip install kivy and importing app function       
+from kivy.uix.button import Button                                                                    # importing button by using kivy
+
+
+class ButtonApp(App):                                                                                 # creating class
+    def build(self):                                                                                  # using build method    
+        btn = Button(text ="click",size_hint =(0.3,0.4),pos_hint={"center_x":0.5,"center_y":0.5},
+                     font_size = "44sp",on_release=self.btn_click, on_press= self.btn_click)         # button function and detaling 
+        return btn                                                                                    # returning button 
+    
+    def btn_click(self, btn):                                                                        # creating btn_click class
+        print("Button Clicked")                                                                     # print func...      
+    
+
+
+
+ButtonApp().run()                                                                                     # return function 
+
+
+# note (use either on_press= self.btn_click or on_release=self.btn_click only one at a time)
+
