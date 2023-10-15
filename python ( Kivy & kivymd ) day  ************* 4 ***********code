@@ -1,0 +1,51 @@
+# kivy  boxLayout 
+# python ( Kivy & kivymd ) day  ************* 4 ***********code
+
+
+from kivy.app import App                                                                            # importing app 
+from kivy.uix.button import Button                                                                  # importing an image in kivy func..
+from kivy.uix.boxlayout import BoxLayout                                                            # box layout 
+from kivy.core.window import Window                                                                 # import window will help in colour and window size 7 other 
+
+ 
+# creating window bg clour and size 
+
+Window.clearcolour=(255,255,255)                                                                      # button colour
+Window.size=(400,300)                                                                                 # button size 
+
+
+# ( you cannot run both button 1 and button 2 by sepration or other fun, need to use layout )
+
+class ButtonApp(App):                                                                                  # creating class
+    def build(self):                                                                                   # using build method    
+        layout = BoxLayout(orientation = "vertical",spacing =40, padding=40)                           # application box layout   
+                   
+ #   in layout both can be used verticle and horizontal , sacing and padding are also using for good interface
+
+        btn1 = Button(text ="Button 1")                                                                # button func Button 
+        btn2 = Button(text ="Button 2")                                                                # button func Button 
+        btn3 = Button(text ="Button 3")                                                                # button func Button 
+        btn4 = Button(text ="Button 4")                                                                # button func Button 
+        btn5 = Button(text ="Button 5")                                                                # button func Button 
+
+
+        layout.add_widget(btn1)                                                                        # recalling button func 
+        layout.add_widget(btn2)                                                                        # recalling button func 
+        layout.add_widget(btn3)                                                                        # recalling button func 
+        layout.add_widget(btn4)                                                                        # recalling button func 
+        layout.add_widget(btn5)                                                                        # recalling button func 
+
+
+
+        return  layout                                                                          # returning layout func.. 
+
+
+
+# running the function 
+ButtonApp().run()
+
+
+######################## ************************** END ***********************#######################
+
+
+
