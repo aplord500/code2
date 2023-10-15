@@ -1,0 +1,38 @@
+# kivy  Grid Layout 
+# python ( Kivy & kivymd ) day  *** 5 ***code ( Grid Layout )
+
+
+from kivy.app import App                                                                            # import kivy
+from kivy.uix.textinput import TextInput                                                            # import kivy.uix         
+from kivy.uix.boxlayout import BoxLayout                                                            # import box layout 
+from kivy.uix.button import Button                                                                  # import button 
+
+
+
+class texrinputApp(App):                                                                             # class .....
+    def build(self):                                                                                 # ui of app.
+        layout = BoxLayout( orientation = "vertical",padding=130,spacing=130)                         # layout function of app
+   
+   
+        self.email = TextInput(text="Enter Your Email")                                              # creating email button 
+        self.password = TextInput(text = "Enter Your Password")                                      # creating password button 
+        self.submit = Button(text="log In", on_press = self.submitbtn)                               # creating submit  button 
+   
+   
+        layout.add_widget(self.email)                                                                # calling email layout button ....
+        layout.add_widget(self.password)                                                             # calling password layout button....
+        layout.add_widget(self.submit)                                                               # calling submit layout button ....
+    
+    
+        return layout                                                                                # returning layout 
+
+    def submitbtn(self,obj):                                                                         # def of submittbn
+        print(f"your rmail is ={self.email.text}")                                                     
+        print(f"your pasword is ={self.password.text}")
+
+
+
+
+texrinputApp().run()                                                                                  # running all code
+
+
