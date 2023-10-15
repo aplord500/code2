@@ -1,0 +1,20 @@
+# APPLICATION DEVELOPMENT BY USING KIVY & KIVYMD SERIES DAY - CODE 
+
+# ----------DAY  (1) ONE---------
+
+from kivy.app import App                                                               # pip install kivy and importing app function       
+from kivy.uix.label import Label                                                       # label use to right on application, ui
+from kivy.core.window import Window                                                    # for background app colour import
+
+Window.clearcolour=(1,1,1,1)                                                            # window bg colour 
+
+
+class UTSapp(App):                                                                       # inciating class
+    def build(self):                                                                      # using build method 
+        label =Label(text ="UTS",font_size="100sp",bold=True,color=(1,0,0,1))             # making  Variable  labeland inputing setails 
+        return label                                                                     # returning label 
+                                                                             
+
+UTSapp().run()                                                                            # calling class 
+
+
