@@ -1,0 +1,42 @@
+# kivy  Grid Layout 
+# ( Kivy & kivymd ) day  *** 5 ***code ( Grid Layout )
+
+from kivy.app import App                                                                                 # pip install kivy and importing app function       
+from kivy.uix.button import Button                                                                       # importing button by using kivy
+from kivy.uix.gridlayout import GridLayout
+
+
+class gridlayoutApp(App):                                                                                 # creating class
+    def build(self):                                                                                      # using build method    
+        layout = GridLayout(cols=2,row_force_default=True,row_default_height=40)
+        
+ #       layout = GridLayout(rows = 2,row_force_default =True, row_default_height = 140)
+ #       layout = GridLayout(cols = 3,cols_force_default =True, cols_default_height = 140)
+
+        btn1 = Button(text ="Button 1")                                                                    # button function and detaling 
+        btn2 = Button(text ="Button 2")  
+        btn3 = Button(text ="Button 3")  
+        btn4 = Button(text ="Button 4") 
+        btn5 = Button(text ="Button 5")
+        btn6 = Button(text ="Button 6")    
+
+
+        layout.add_widget(btn1)
+        layout.add_widget(btn2)
+        layout.add_widget(btn3)
+        layout.add_widget(btn4)
+        layout.add_widget(btn5)
+        layout.add_widget(btn6)
+
+
+        return layout                                                                                       # returning button 
+
+
+
+gridlayoutApp().run()                                                                                         # return function 
+
+
+
+
+
+
