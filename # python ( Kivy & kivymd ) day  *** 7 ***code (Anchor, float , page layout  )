@@ -1,0 +1,87 @@
+
+# kivy Anchor, float , page layout 
+# python ( Kivy & kivymd ) day  *** 7 ***code (Anchor, float , page layout  )
+
+
+
+
+# Anchor layout : anchor is use to aligne is use to left right, top bottom etc. 
+
+
+
+
+from kivy.app import App                                                                            # import kivy
+from kivy.uix.button import Button                                                                  # importing button function 
+from kivy.uix.anchorlayout import AnchorLayout                                                      # importing anchore layout 
+
+class layourapp(App):
+    def build(self):
+        layout = AnchorLayout(anchor_x='left', anchor_y = 'top')
+        btn1 = Button(text="ap lord", size_hint =(None,None),width=150)
+        layout.add_widget(btn1)
+        return layout
+
+
+
+layourapp().run()
+
+
+# float layout:  usined to assign your eliment in any screen location --------using pos_hint property.
+
+
+
+from kivy.app import App                                                                            # import kivy
+from kivy.uix.button import Button                                                                  # importing button function 
+from kivy.uix.floatlayout import FloatLayout                                                        # importing float layout 
+
+class layourapp(App):
+    def build(self):
+        layout = FloatLayout()
+        btn1 = Button(text="ap lord", size_hint =(None,None),width=150,pos_hint={"center_y":0.5,"center_x":0.5})
+        layout.add_widget(btn1)
+        return layout
+
+
+
+layourapp().run()
+
+
+
+# page layout : is use to create page.
+
+
+from kivy.app import App                                                                            # import kivy
+from kivy.uix.button import Button                                                                  # importing button function 
+from kivy.uix.pagelayout import PageLayout                                                          # importing float layout 
+
+
+class layourapp(App):
+    def build(self):
+        layout = PageLayout()
+
+        btn1 = Button(text="ap", size_hint =(None,None),width=150)
+        btn2 = Button(text="lord", size_hint =(None,None),width=150)
+        layout.add_widget(btn1)
+        
+        layout.add_widget(btn2)
+        return layout
+
+
+
+layourapp().run()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
