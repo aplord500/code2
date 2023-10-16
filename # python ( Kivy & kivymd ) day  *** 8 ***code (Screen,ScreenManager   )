@@ -1,0 +1,80 @@
+# Screen,ScreenManager   
+# python ( Kivy & kivymd ) day  *** 8 ***code (Screen,ScreenManager   )
+
+
+
+from kivy.app import App                                                 #  an importing kivy.app
+from kivy.uix.screenmanager import Screen,ScreenManager                  # an importing uix.screen manager function
+
+
+
+class HomeScreen(Screen):                                                # creating home Screen class
+    pass                                                                 # pass is py function means to pass for now
+
+class FirstScreen(Screen):                                               # creating FirstScreen class 
+    pass                                                                 # pass is py function means to pass for now
+
+class Manager(ScreenManager):                                            #  creating Manager class 
+    pass                                                                 #  pass is py function means to pass for now
+
+
+
+class Myapp(App):                                                         # Myapp class 
+    def build(self):                                                      # build (self) for user interface
+        return super().build()                                            # return function to return on page
+
+
+# before runing the code connect to my.kv file to text editor so from file you can able to 
+# connect all function of this page.
+
+# how to connect to text editor make file with name of my.kv use first work of Myapp. non caption 
+# word and type my.kv so file will be connected with the python code page then run function.
+
+
+Myapp().run()                                                            # entire code runner
+
+
+
+
+
+
+# file 
+
+# file text to controle python page 
+
+
+manager:
+    Homescreen:
+    FirstScreen
+
+
+<Homescreen>:
+    name : "Home"
+    Button:
+        text: "First screen"
+        on_release:
+            app.root.current = "FirstScreen"
+            root.manager.transition.direction = "left"
+
+
+
+<FirstScreen>:
+    name : "First"
+    Button:
+        text: "Back"
+        on_release:
+            app.root.current = "Home"
+            root.manager.transition.direction = "right"
+
+
+
+
+
+
+
+
+
+
+
+
+
