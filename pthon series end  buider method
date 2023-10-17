@@ -1,0 +1,56 @@
+#                                                     Builder Method                                               #
+
+
+
+#                                           # 1    ( Builder.load_string(mydoc) )                                    #
+
+
+
+
+
+from kivy.app import App                                # we have imported app from kivy.app
+from kivy.lang import Builder                           # we have imported Builder from kivy.lang 
+
+
+mydoc = ''' Ap Loard's and Company'''                   # we have creted the string to add all stuff information.
+
+
+class MyApp(App):                                       # we have created class for app 
+    def build(self):                                    # def func
+        bldr = Builder.load_string(mydoc)               # we created builder and load string with mydoc
+        return bldr
+    
+
+MyApp().run()                                           # we are runing the class by functning
+
+
+
+
+
+#                                           # 2    ( Builder.load_file(file) )                                    #
+
+
+
+
+
+from kivy.app import App                                # we have imported app from kivy.app
+from kivy.lang import Builder                           # we have imported Builder from kivy.lang 
+
+
+
+class MyApp(App):                                       # we have created class for app 
+    def build(self):                                    # def func
+        bldr = Builder.load_file("myfile")              # we created builder and load string with mydoc
+
+#          we have to create on file name with myfile and have to put all information.        
+
+        return bldr
+    
+
+
+
+MyApp().run()                                           # we are runing the class by functning
+
+
+
+
