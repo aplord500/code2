@@ -1,0 +1,17 @@
+
+
+from kivymd.app import MDApp                                                                    # we have import kivimd.app 
+from kivymd.uix.label import MDLabel                                                            # we have import MDLabel 
+
+ 
+class snakeApp(MDApp):                                                                          # class are made 
+    def build(self):                                                                            # def fun
+        txt = MDLabel (text= "Ap lord & company ..",halign ="center", font_style ="H1",         # txt and all ingridend  
+                       theme_text_color = "Custom",
+                       text_color=(250/255.0, 250/255.0, 400/255.0, 1) )
+        return txt                                                                              # return value 
+
+snakeApp().run()                                                                                # all code runner
+
+
+
