@@ -1,0 +1,22 @@
+# Kvmd  epi-3 (Crating  Buttons)
+
+from kivymd.app import MDApp
+from kivymd.uix.button import MDFlatButton,MDRectangleFlatIconButton,MDIconButton
+
+
+class MyBTN(MDApp):
+    def build(self):
+
+        btn1 = MDFlatButton(text="click here....",
+                           pos_hint ={"center_x":0.5,"center_y":0.5})
+        btn2 = MDRectangleFlatIconButton(text="click here....",
+                           pos_hint ={"center_x":0.5,"center_y":0.5})
+        btn3 = MDIconButton(text="android",
+                           pos_hint ={"center_x":0.5,"center_y":0.5})
+        
+        return btn3
+    
+
+MyBTN().run()    
+
+
