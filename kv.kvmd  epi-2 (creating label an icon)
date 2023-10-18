@@ -1,0 +1,14 @@
+# kv.kvmd  epi-2 (creating label an icon)
+
+from kivymd.app import MDApp                                                                    # we have import kivimd.app 
+from kivymd.uix.label import MDIcon                                                            # we have import MDicon
+
+
+class snakeApp(MDApp):                                                                           # creating class 
+    def build(self):                                                                             # def value 
+        return MDIcon(icon="biotech",halign = "center", font_style ="H3")                        # return func..
+
+snakeApp().run()                                                                                 # coder runner
+
+# visit fonts.google.com site for more icon 
+
