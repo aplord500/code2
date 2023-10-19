@@ -1,0 +1,22 @@
+# Kvmd  epi-4 ( Theams )
+
+from kivymd.app import MDApp                                                                           # we have import mdapp
+from kivymd.uix.button import MDFillRoundFlatIconButton                                                # we have import MDFillRoundFlatIconButton
+
+
+
+
+class Mythm(MDApp):                                                                                     # we have import MDFillRoundFlatIconButton
+    def build(self):
+        self.theme_cls.primary_palette="Red"                            # imp                           # we have creaded colour fun                   
+        self.theme_cls.primary_hue = "900"                              # imp                           # we have creaded colour darkness fun   
+        btn =  MDFillRoundFlatIconButton (text="theme...",pos_hint={"center_x":0.5,"center_y":0.5})     # btn and all function 
+        return btn                                                                                      # btn return       
+ 
+
+
+Mythm().run()                                                                                           # runing function   
+
+
+
+# it's an easiest function to create                    
