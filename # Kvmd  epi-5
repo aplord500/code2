@@ -1,0 +1,22 @@
+
+from kivymd.app import MDApp                                                                           # import MDapp
+from kivymd.uix.textfield import MDTextField                                                           # import MDTextField 
+from kivymd.uix.boxlayout import MDBoxLayout                                                           # import MDBoxLayout
+from kivymd.uix.button import MDFillRoundFlatButton                                                    # import MDFillRoundFlatButton      
+
+ 
+class TextFieldApp(MDApp):                                                                             # creating class 
+    def build(self):                                                                                   # creating  build method 
+        layout = MDBoxLayout(orientation="vertical",spacing=10,padding=250)                            # layout MDBoxLayout func 
+        txtfld= MDTextField(text="Email or Phone No",pos_hint={"center_x":0.5,"center_y":0.5})         # txtfld MDTextField func
+        btn = MDFillRoundFlatButton(text="theme...",pos_hint={"center_x":0.5,"center_y":0.5})          # btn MDFillRoundFlatButton func
+        layout.add_widget(txtfld)                                                                      # layout.add_widget fuc 
+        layout.add_widget(btn)                                                                         # layout.add_widget  func
+
+        return layout                                                                                  # return func.......
+
+
+TextFieldApp().run()                                                                                   # run func.........
+
+
+
