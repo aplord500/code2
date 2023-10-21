@@ -1,0 +1,23 @@
+# Kvmd  epi-6 ( DialogBox )
+
+from kivymd.app import MDApp                                                                  # we have import mdapp
+from kivymd.uix.dialog import MDDialog                                                        # we have import MDDialog  
+from kivymd.uix.button import MDFillRoundFlatButton                                           # we have import MDFillRoundFlatButton    
+
+
+class MyDialogBoxApp(MDApp):                                                                 # created a class 
+    def build(self):                                                                         # def func 
+        close_btn = MDFillRoundFlatButton(text="Close",on_relese=self.close_dialog)          # created close_btn
+        more_btn = MDFillRoundFlatButton(text = "More")                                      #  created more_btn
+ 
+        self.dialog = MDDialog(title="Name",text="Andrew Awesom",size_hint=(0.9,1),buttons=[close_btn,more_btn]) #  created self.dialog 
+
+        self.dialog.open()                                                                                      #  created  self.dialog.open 
+
+    def close_dialog(self,obj):                                                                                 #  created  self.dialog.open   
+        self.dialog.dismiss()                                                                                   #  created self.dialog.dismiss 
+
+
+MyDialogBoxApp().run()                                                                                         # run 
+
+
