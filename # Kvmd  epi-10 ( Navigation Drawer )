@@ -1,0 +1,67 @@
+# Kvmd  epi-10 ( Navigation Drawer )
+
+
+
+from kivymd.app import MDApp
+from kivy.lang import Builder
+
+
+application = ''' 
+
+<DrawerClickableItem@MDNavigationDrawerItem>
+<DrawerLabelItem@MDNavigationDrawerItem>
+
+
+MDScreen:
+    MDNavigationLayout:
+        MDScreenManaer:
+            MDScreen:
+                MDTopAppBar:
+                    title = " application"
+                    elevation:4
+                    pos_hint:{"top":1}
+                    left_action_items:[['menu':lambda: x:nav_drawer.set_state("open")]]
+
+        MDNavigatitionDrawer:
+            id:Nav_drawer
+
+            MDNavigationDrawerMenu:
+
+                MDNavigationDrawerHadder:
+                    title: " Mumbai University"
+                    text: " Andrew Awesom " 
+                    spacing:"4dp"
+                    padding:"12dp",0,0,"32"    
+
+                MDNavigatorDrawerLabel:
+                    text: "menu"
+
+                DrawerClickableItem:
+                    icon: "gmail"
+                    text: "Inbox"
+                DrawerClickableItem:
+                    icon: "gmail"
+                    text: "Inbox"
+                DrawerClickableItem:
+                    icon: "gmail"
+                    text: "Inbox"    
+                    
+                MDNavigatorDrawerLabel:
+                    text: "All"
+                DrawerLabelItem:
+                    icon: "send"
+                    text: "Hello"    
+
+
+
+'''
+
+class cobraApp(MDApp):
+    def build(self):
+        bldr = Builder.load_string(application)
+        return bldr
+
+
+
+cobraApp().run()
+
