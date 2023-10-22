@@ -1,0 +1,42 @@
+# Kvmd  epi-9 ( AppBar )
+
+from kivymd.app import MDApp                                  # import MDApp                                           
+from kivy.lang.builder import Builder                         # import Builder 
+
+
+# giving logic in programm 
+
+kv= """ 
+MDBoxLayout:
+    orientation: 'vertical'
+    MDTopAppBar:
+        title: "Demo App"
+        left_action_items:[["Menu"]]
+        right_action_items:[["clock"],["git"]]
+        elevation:17
+
+    MDBottmAppBar:
+        MDTopAppBar:
+            title: "Bottom"
+            icon: "gitlab"
+            type: "Bottom"
+            left_action_item: [["Menu"]]
+
+    
+    MDLabel:
+        text: "That's our Body of our app"
+        halign: "center" 
+        
+"""
+
+
+
+class MyApp(MDApp):
+    def build(self):
+        return Builder.load_string(kv)                                    # returning programm
+
+
+MDApp().run()                                                             # code runner 
+
+
+
