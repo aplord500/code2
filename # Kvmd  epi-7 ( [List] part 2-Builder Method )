@@ -1,0 +1,95 @@
+# Kvmd  epi-7 ( [List] part 2-Builder Method ) - DEMO 
+
+from kivymd.app import MDApp
+from kivy.lang.builder import Builder
+
+Prop = """ 
+MDScrollView:
+ MDList:
+  OneLineListitem:
+    text:"item 1"
+"""
+
+class ListBuilderApp(MDApp):
+    def build(self):
+        bldr = Builder.load_string(Prop)
+        return bldr
+    
+ListBuilderApp().run()
+
+
+
+
+# Kvmd  epi-7 ( [List] part 2-Builder Method-Builder.load_string(Mialtus) ) - ORG
+
+
+from kivymd.app import MDApp                                                 # importing mdapp by using kvmd.app
+from kivy.lang.builder import Builder                                        # importing Builder  by using kivy.lang.builder
+from kivymd.uix.list import OneLineListItem                                  # importing OneLineListItem  by using kivymd.uix.list
+
+# creating sting 
+
+Mialtus = """ 
+MDScrollView:
+ MDList:
+  id:mylist
+
+"""
+# creating class
+class MyListBuilderApp(MDApp):
+    def build(self):                                                       # creating def 
+        bldr = Builder.load_string(Mialtus)                                # creating bldr (load_string(Mialtus) )
+        return bldr                                                        # returning bldr
+    def on_start(self):                                                    # creating def  / on_start(self)/
+        for i in range(30):                                                # for loop 
+            self.root.ids.mylist.add_widget(
+                OneLineListItem(text=f"item{i}")
+            )
+
+
+
+MyListBuilderApp().run()                                                       # runing all logic
+         
+
+
+# Kvmd  epi-7 ( [List] part 2-Builder Method-Builder.load_file(Mialtus) ) - ORG
+
+
+from kivymd.app import MDApp                                                 # importing mdapp by using kvmd.app
+from kivy.lang.builder import Builder                                        # importing Builder  by using kivy.lang.builder
+from kivymd.uix.list import OneLineListItem                                  # importing OneLineListItem  by using kivymd.uix.list
+
+
+# creating class
+class MyListBuilderApp(MDApp):
+    def build(self):                                                       # creating def 
+        bldr =Builder.load_file("Mialtus.kv")                              # creating bldr (load_string(Mialtus) )
+        return bldr                                                        # returning bldr
+    def on_start(self):                                                    # creating def  / on_start(self)/
+        for i in range(30):                                                # for loop 
+            self.root.ids.mylist.add_widget(
+                OneLineListItem(text=f"item{i}")
+            )
+
+
+
+MyListBuilderApp().run()                                                   # runing all logic
+         
+# imp : please creat a seprate file for logic code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
