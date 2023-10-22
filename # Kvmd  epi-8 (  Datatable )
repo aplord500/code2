@@ -1,0 +1,138 @@
+# Kvmd  epi-8 ( Datatable )
+
+from kivymd.app import MDApp
+from kivy.metrics import dp
+from kivymd.uix.datatables import MDDataTable
+from kivymd.uix.anchorlayout import MDAnchorLayout
+
+#flow of the program
+# MDanchoring --> MDDataTable
+
+class MyDataTableApp(MDApp):
+    def build(self):
+        return MDAnchorLayout(
+            MDDataTable(
+                size_hint =(0.8,0.9),
+                check = True,
+                use_pagination =True,
+                column_data = [
+                    ("No",dp(30)),
+                    ("Price",dp(30)),
+                    ("Name",dp(60))
+                ],
+                row_data =[
+                    ("1","801","Rich Dad & Poor Dad"),
+                    ("2","901","Think Fast and Slow"),
+                    ("3","501"," 7 Heighly Effective Habbit"),
+                    ("4","701"," The Art of Seduction"),
+                    ("5","9001"," 48 Laws of Power"),
+                    ("6","8001","Ego is Enemy"),
+                    ("7","9001","  The power of Now"),
+                    ("8","7001"," Give and Take"),
+                    ("9","7001"," Alter Ego"),
+                    ("10","50001","  Biograph of Elon Musk")
+                ]
+            )
+        )
+        
+
+
+MyDataTableApp().run()
+
+
+# Kvmd  epi-8 ( Datatable )
+
+from kivymd.app import MDApp                                                              #importing MDapp
+from kivy.metrics import dp                                                               #importing dp 
+from kivymd.uix.datatables import MDDataTable                                             #importing MDDataTable 
+from kivymd.uix.anchorlayout import MDAnchorLayout                                        #importing MDAnchorLayout
+
+#flow of the program
+# MDanchoring --> MDDataTable
+
+# creat class 
+class MyDataTableApp(MDApp):
+    def build(self):                                                                       # creating def
+        layout = MDAnchorLayout ()                                                         # giving logic to program 
+        mytable = MDDataTable (
+            size_hint =(0.8,0.9),
+                check = True,
+                use_pagination =True,
+                column_data = [
+                    ("No",dp(30)),
+                    ("Price",dp(30)),
+                    ("Name",dp(60))
+                ],
+                row_data =[
+                    ("1","801","Rich Dad & Poor Dad"),
+                    ("2","901","Think Fast and Slow"),
+                    ("3","501"," 7 Heighly Effective Habbit"),
+                    ("4","701"," The Art of Seduction"),
+                    ("5","9001"," 48 Laws of Power"),
+                    ("6","8001","Ego is Enemy"),
+                    ("7","9001","  The power of Now"),
+                    ("8","7001"," Give and Take"),
+                    ("9","7001"," Alter Ego"),
+                    ("10","50001","  Biograph of Elon Musk")
+                ]
+            )
+        layout.add_widget(mytable)                                                          # add widget fun
+        return layout                                                                       # runing code 
+
+'''   
+         return MDAnchorLayout(
+            MDDataTable(
+                size_hint =(0.8,0.9),
+                check = True,
+                use_pagination =True,
+                column_data = [
+                    ("No",dp(30)),
+                    ("Price",dp(30)),
+                    ("Name",dp(60))
+                ],
+                row_data =[
+                    ("1","801","Rich Dad & Poor Dad"),
+                    ("2","901","Think Fast and Slow"),
+                    ("3","501"," 7 Heighly Effective Habbit"),
+                    ("4","701"," The Art of Seduction"),
+                    ("5","9001"," 48 Laws of Power"),
+                    ("6","8001","Ego is Enemy"),
+                    ("7","9001","  The power of Now"),
+                    ("8","7001"," Give and Take"),
+                    ("9","7001"," Alter Ego"),
+                    ("10","50001","  Biograph of Elon Musk")
+                ]
+            )
+        )
+        
+''' 
+
+MyDataTableApp().run()                                                                     # running code 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
