@@ -1,0 +1,56 @@
+# Kvmd  epi-11 ( Multi-Screen )
+
+
+from kivymd.app import MDApp
+from kivy.lang.builder import Builder
+from kivy.uix.screenmanager import ScreenManager,Screen
+
+
+kvmd= """
+ScreenManager:
+    FirstScreen:
+    SecondScreen:
+
+<FirstScreen>:
+    name: "First"
+    MDLable:
+        text:'First Screen'
+        halign: 'center'
+    MDRectangleFlatButton:
+        text: 'Secound'
+        pos_hint: {'center_x':0.5,'center_y':0.4}
+        on_press: root.manager.current='Secound'    
+
+<SecondScreen>:
+    name: "Secound"
+    MDLable:
+        text:'Secound Screen'
+        halign: 'center'
+    MDRectangleFlatButton:
+        text: 'Back'
+        pos_hint: {'center_x':0.5,'center_y':0.4}
+        on_press: root.manager.current='First'  
+
+"""
+
+
+
+class FirstScreen(Screen):
+    pass
+
+class SecondScreen(Screen):
+    pass
+
+
+class snakeApp(MDApp):
+    def build(self):
+        bldr = Builder.load_string(kvmd)
+        return bldr
+
+
+
+snakeApp().run()
+
+
+
+
